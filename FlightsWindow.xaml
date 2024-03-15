@@ -1,0 +1,17 @@
+﻿<Window x:Class="PRAKTIKA_1._2.FlightsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Рейсы" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0" Margin="0,10">
+            <Button x:Name="BackButton" Content="Назад" Click="BackButton_Click" Margin="0,0,10,0"/>
+            <Button x:Name="NextButton" Content="Вперед" Click="NextButton_Click"/>
+        </StackPanel>
+        <DataGrid x:Name="FlightsDataGrid" AutoGenerateColumns="True" Margin="10" ItemsSource="{Binding}" Grid.Row="1">
+        </DataGrid>
+    </Grid>
+</Window>
